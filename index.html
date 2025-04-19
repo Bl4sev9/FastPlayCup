@@ -1,200 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastPlayCup Strona Główna</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #ffffff;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FastPlayCup Strona Główna</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #ffffff;
+    }
 
-        header {
-            background-color: #970000;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        header h1 {
-            color: rgb(243, 243, 243);
-            margin: 0;
-            font-size: 24px;
-            flex: 1; 
-            text-align: center;
-        }
-        
-        header h3 {
+    header {
+      width: 100%;
+      background-color: #970000;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-            color: #E39113;
-            margin: 0;
-            font-size: 24px;
-            text-align: left;
+    header h3 {
+      color: #E39113;
+      margin: 0;
+      font-size: 24px;
+    }
 
-        }
-            
-        nav {
-            display: flex;
-            gap: 15px;
-        }
+    nav {
+      display: flex;
+      gap: 15px;
+    }
 
-        nav a {
-            color: #E39113;
-            text-decoration: none;
-            font-size: 16px;
-        }
+    nav a {
+      color: #E39113;
+      text-decoration: none;
+      font-size: 16px;
+    }
 
-        nav a:hover {
-            color: #0af;
-        }
+    nav a:hover {
+      color: #0af;
+    }
 
-        .main-container {
-            display: flex;
-            padding: 20px;
-        }
+    .main-container {
+      display: flex;
+      padding: 20px 0;
+    }
 
-        .news-section, .matches-section {
-            flex: 1;
-            margin-right: 20px;
-        }
+    .news-section,
+    .matches-section {
+      flex: 1;
+      margin-right: 20px;
+    }
 
-        .news-section h2, .matches-section h2 {
-            font-size: 20px;
-            border-bottom: 2px solid #FF7900;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
+    .news-section h2,
+    .matches-section h2 {
+      font-size: 20px;
+      border-bottom: 2px solid #FF7900;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
 
-        .news-item, .match-item {
-            margin-bottom: 15px;
-            padding: 10px;
-            background-color: #333;
-            border-radius: 5px;
-        }
+    .news-item,
+    .match-item {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #333;
+      border-radius: 5px;
+    }
 
-        .news-item h3, .match-item h3 {
-            margin: 0;
-            font-size: 18px;
-        }
+    .news-item h3,
+    .match-item h3 {
+      margin: 0;
+      font-size: 18px;
+    }
 
-        .news-item p {
-            margin: 5px 0 0;
-            font-size: 14px;
-        }
+    .news-item p {
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
 
-        .match-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .match-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .match-item .teams {
-            display: flex;
-            gap: 10px;
-        }
+    .match-item .teams {
+      display: flex;
+      gap: 10px;
+    }
 
-        .team {
-            font-weight: bold;
-        }
+    .team {
+      font-weight: bold;
+    }
 
-        .footer {
-            background-color: #333;
-            color: #eaeaea;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
+    .footer {
+      width: 100%;
+      background-color: #333;
+      color: #eaeaea;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
 
-        .footer a {
-            color: #0af;
-            text-decoration: none;
-        }
+    .footer a {
+      color: #0af;
+      text-decoration: none;
+    }
 
-        header img {
-            height: 50px; /* Fixed height for the image */
-            object-fit: contain; /* Keeps aspect ratio */
-            position: absolute;
-            left: 924px;
-            transform: translateX(-50%);
-        }
-    
-        .footer img {
-            height: 30px; /* Set height to match footer size */
-            width: auto; /* Maintain aspect ratio */
-            vertical-align: middle; /* Align image with text */
-            transition: transform 0.3s ease;
-        }
+    header img {
+      height: 50px;
+      object-fit: contain;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-        .footer img:hover {
-            transform: scale(1.2);
-        }
+    .footer img {
+      height: 30px;
+      width: auto;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
 
-        .data{
-            font-size: 10px;
-        }
-        .support{
-            color:#990025 !important;
-        }
-        
-    </style>
+    .footer img:hover {
+      transform: scale(1.2);
+    }
+
+    .data {
+      font-size: 10px;
+    }
+
+    .support {
+      color: #990025 !important;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h3>FastPlayCup</h3>
-        <img src="FastPlayCupprof" alt="FastPlayCup" style="height: 58px; left:50%; object-fit: contain;">
-        
-        
-        <nav>
-            <a href="file:///C:/Users/bl4zz/Desktop/VSCP/turniej%20strony/druzyny.html">Drużyny</a>
-            <a href="https://bl4sev9.github.io/FastPlayCup-News/">News</a>
-            <a href="file:///C:/Users/bl4zz/Desktop/VSCP/turniej%20strony/mecze.html">Mecze</a>
-            <a href="https://www.twitch.tv/bl4zze__ "target="_blank">Mecze na żywo</a>
-            <a href="file:///C:/Users/bl4zz/Desktop/VSCP/turniej%20strony/regulamin.html"target="_blank">Regulamin turnieju</a>
+  <header>
+    <h3>FastPlayCup</h3>
+    <img src="FastPlayCupprof" alt="FastPlayCup" />
+    <nav>
+      <a href="file:///C:/Users/bl4zz/Desktop/VSCP/turniej%20strony/druzyny.html">Drużyny</a>
+      <a href="https://bl4sev9.github.io/FastPlayCup-News/">News</a>
+      <a href="file:///C:/Users/bl4zz/Desktop/VSCP/turniej%20strony/mecze.html">Mecze</a>
+      <a href="https://www.twitch.tv/bl4zze__" target="_blank">Mecze na żywo</a>
+      <a href="file:///C:/Users/bl4zz/Desktop/VSCP/turniej%20strony/regulamin.html" target="_blank">Regulamin turnieju</a>
+    </nav>
+  </header>
 
-        
-        </nav>
-    </header>
-<!--nowe informacje--> 
+  <div class="wrapper">
+    <!--nowe informacje-->
     <div class="main-container">
-        <div class="news-section" id="news">
-            <h2>Nowości</h2>
-            <div class="news-item">
-                <h3>Nadchodzi pierwszy sezon FastPlayCup</h3>
-                <p>Już za niedługo odbędą się zapisy na pierwszy Sezon turnieju FastPlayCup
-                <p><a class="data">19.04.2025</a>
-            </div>
+      <div class="news-section" id="news">
+        <h2>Nowości</h2>
+        <div class="news-item">
+          <h3>Nadchodzi pierwszy sezon FastPlayCup</h3>
+          <p>Już za niedługo odbędą się zapisy na pierwszy Sezon turnieju FastPlayCup</p>
+          <p><a class="data">19.04.2025</a></p>
         </div>
-<!--zapowiedzi meczów-->
-        <div class="matches-section" id="matches">
-            <h2>Nadchodzące Mecze</h2>
-                    <div class="match-item">
-                        <div class="teams">
-                            <span class="team"></span>
-                            <span>vs</span>
-                            <span class="team"><!--nazwa teamu--></span>
-                        </div>
-                        <span><!--data--></span>
-                    </div>
-                   
+      </div>
+
+      <!--zapowiedzi meczów-->
+      <div class="matches-section" id="matches">
+        <h2>Nadchodzące Mecze</h2>
+        <div class="match-item">
+          <div class="teams">
+            <span class="team"></span>
+            <span>vs</span>
+            <span class="team"><!--nazwa teamu--></span>
+          </div>
+          <span><!--data--></span>
         </div>
+      </div>
     </div>
+  </div>
 
-    <footer class="footer">
-        <p>&copy;FastPlayCup <a class="support" href="https://discord.gg/UjxWHdudGs" target="_blank"> Support </a> 
-        <!-- <a href="" target="_blank"><img src="igpng.png"> </a>-->
-            <a href="https://discord.gg/q9U8P75HYj" target="_blank"><img src="dc.png"> </a>
-        <!--<a href="https://x.com" target="_blank"><img src="x.png"> </a>
-            <a href="https://youtube.com" target="_blank"><img src="yt.png"> </a>
-            <a href="https://tiktok.com" target="_blank"><img src="tt.png"> </a>-->
-
-        
-        </p>
-    
-    </footer>
+  <footer class="footer">
+    <p>
+      &copy;FastPlayCup
+      <a class="support" href="https://discord.gg/UjxWHdudGs" target="_blank">Support</a>
+      <a href="https://discord.gg/q9U8P75HYj" target="_blank"><img src="dc.png" alt="Discord" /></a>
+    </p>
+  </footer>
 </body>
 </html>
