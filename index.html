@@ -6,152 +6,174 @@
   <link rel="icon" href="FastPlayCupprof.png" type="image/png">
   <title>FastPlayCup Strona Główna</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #121212;
-      color: #ffffff;
-    }
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-    .wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+.data {
+  font-size: 10px;
+}
 
-    header {
-      width: 97.897%;
-      background-color: #970000;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 40px;
-    }
-    header a {
-            color: white;
-      text-decoration: none;
-      font-size: 16px;}
-    header h3 {
-      color: WHITE;
-      margin: 0;
-      font-size: 24px;
-    }
+.footer {
+  background-color: #333;
+  color: #eaeaea;
+  margin-top: 20px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
 
-    nav {
-      display: flex;
-      gap: 15px;
-      position: absolute;
-      left:80%;
-    }
+.footer a {
+  color: #0af;
+  text-decoration: none;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-    }
+.footer img {
+  height: 30px;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+  width: auto;
+}
 
-    nav a:hover {
-      color: #0af;
-    }
+.footer img:hover {
+  transform: scale(1.2);
+}
 
-    .main-container {
-      display: flex;
-      padding: 20px 0;
-    }
+header {
+  align-items: center;
+  background-color: #970000;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  padding: 15px 20px;
+  width: 97.897%;
+}
 
-    .news-section,
-    .matches-section {
-      flex: 1;
-      margin-right: 20px;
-    }
+header a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
 
-    .news-section h2,
-    .matches-section h2 {
-      font-size: 20px;
-      border-bottom: 2px solid #FF7900;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-    }
+header h3 {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
 
-    .news-item,
-    .match-item {
-      margin-bottom: 15px;
-      padding: 10px;
-      background-color: #333;
-      border-radius: 5px;
-    }
+header img {
+  height: 70px;
+  left: 50%;
+  object-fit: contain;
+  position: absolute;
+  transform: translateX(-50%);
+}
 
-    .news-item h3,
-    .match-item h3 {
-      margin: 0;
-      font-size: 18px;
-    }
+h3 {
+  size: 50px;
+}
 
-    .news-item p {
-      margin: 5px 0 0;
-      font-size: 14px;
-    }
+.main-container {
+  display: flex;
+  padding: 20px 0;
+}
 
-    .match-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.match-item {
+  align-items: center;
+  background-color: #333;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 10px;
+}
 
-    .match-item .teams {
-      display: flex;
-      gap: 10px;
-    }
+.match-item h3 {
+  font-size: 18px;
+  margin: 0;
+}
 
-    .team {
-      font-weight: bold;
-    }
+.match-item .teams {
+  display: flex;
+  gap: 10px;
+}
 
-    .footer {
-      width: 100%;
-      background-color: #333;
-      color: #eaeaea;
-      text-align: center;
-      padding: 10px 0;
-      margin-top: 20px;
-    }
+.matches-section {
+  flex: 1;
+  margin-right: 20px;
+}
 
-    .footer a {
-      color: #0af;
-      text-decoration: none;
-    }
+.matches-section h2 {
+  border-bottom: 2px solid #FF7900;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
 
-    header img {
-      height: 70px;
-      object-fit: contain;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+nav {
+  display: flex;
+  gap: 15px;
+  left: 80%;
+  position: absolute;
+}
 
-    .footer img {
-      height: 30px;
-      width: auto;
-      vertical-align: middle;
-      transition: transform 0.3s ease;
-    }
+nav a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
 
-    .footer img:hover {
-      transform: scale(1.2);
-    }
+nav a:hover {
+  color: #0af;
+}
 
-    .data {
-      font-size: 10px;
-    }
+.news-item {
+  background-color: #333;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
 
-    .support {
-      color: #990025 !important;
-    }
-    h3{
-        size:50px;
-    }
+.news-item h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.news-item p {
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+.news-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.news-section h2 {
+  border-bottom: 2px solid #FF7900;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.support {
+  color: #990025 !important;
+}
+
+.team {
+  font-weight: bold;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
   
   
   
